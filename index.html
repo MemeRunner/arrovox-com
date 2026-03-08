@@ -24,7 +24,7 @@
         }
         header h1 {
             font-family: 'Monoton', sans-serif;
-            font-size: 5.5em; /* Increased from 3.5em */
+            font-size: clamp(2.5em, 10vw, 5.5em); /* Responsive scaling for mobile */
             font-weight: 700;
             margin: 0 0 20px 0;
             letter-spacing: -2px;
@@ -50,13 +50,13 @@
         .project h3 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 1.1em; /* Reduced from 1.6em */
+            font-size: 1.2em; /* Increased for better mobile readability */
             margin-bottom: 8px;
             color: #ffffff;
         }
         .project p {
             margin-top: 0;
-            font-size: 1.1em;
+            font-size: 1.2em;
             max-width: 95%;
             color: #b0b0b0;
         }
