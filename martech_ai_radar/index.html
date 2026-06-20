@@ -108,7 +108,7 @@
                     <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Update Status</p>
                     <div class="flex items-center space-x-2">
                         <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                        <p class="text-lg font-semibold text-stone-700">Live & Synchronized</p>
+                        <p class="text-lg font-semibold text-purple-800">Live & Synchronized</p>
                     </div>
                 </div>
             </div>
@@ -128,15 +128,15 @@
                         </div>
                         <div class="w-full lg:w-1/2 space-y-4">
                             <div class="p-4 bg-stone-50 rounded-lg border-l-4 border-stone-300">
-                                <p class="text-sm font-bold text-stone-700">Highest Volume: Personalization & CDPs</p>
+                                <p class="text-sm font-bold text-purple-800">Highest Volume: Personalization & CDPs</p>
                                 <p class="text-xs text-stone-500">8 active assets identified in the Personalization & CDPs space.</p>
                             </div>
                             <div class="p-4 bg-stone-50 rounded-lg border-l-4 border-stone-300">
-                                <p class="text-sm font-bold text-stone-700">Emerging: AI Search & AEO</p>
+                                <p class="text-sm font-bold text-purple-800">Emerging: AI Search & AEO</p>
                                 <p class="text-xs text-stone-500">New metrics for 'Share of Model' are becoming enterprise standards.</p>
                             </div>
                             <div class="p-4 bg-stone-50 rounded-lg border-l-4 border-stone-300">
-                                <p class="text-sm font-bold text-stone-700">Critical: Media Compliance</p>
+                                <p class="text-sm font-bold text-purple-800">Critical: Media Compliance</p>
                                 <p class="text-xs text-stone-500">C2PA metadata adoption is the leading trend in asset protection.</p>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <div class="lg:col-span-2">
                             <h3 class="text-xs font-bold text-stone-400 uppercase mb-3 tracking-widest">Market Shift Summary</h3>
-                            <p id="detail-summary" class="text-stone-700 leading-relaxed text-lg"></p>
+                            <p id="detail-summary" class="text-purple-800 leading-relaxed text-lg"></p>
                         </div>
                         <div class="bg-stone-50 p-6 rounded-xl">
                             <h3 class="text-xs font-bold text-stone-400 uppercase mb-4 text-center">PRIMARY USER TARGET</h3>
@@ -339,7 +339,7 @@
         function switchView(viewId) {
             // Update UI State
             document.querySelectorAll('nav button').forEach(b => {
-                b.classList.remove('sidebar-item-active', 'bg-stone-100', 'text-stone-800', 'font-bold');
+                b.classList.remove('sidebar-item-active', 'bg-purple-100', 'text-stone-800', 'font-bold');
             });
             document.getElementById(`btn-${viewId}`).classList.add('sidebar-item-active');
 
@@ -370,15 +370,15 @@
                 <tr class="hover:bg-stone-50 transition-colors">
                     <td class="px-6 py-4 font-bold text-stone-800">${a.name}</td>
                     <td class="px-6 py-4 text-stone-600">${a.capability}</td>
-                    <td class="px-6 py-4"><span class="bg-stone-100 px-2 py-1 rounded text-[10px] font-bold text-stone-500 uppercase">${a.target}</span></td>
+                    <td class="px-6 py-4"><span class="bg-purple-100 px-2 py-1 rounded text-[10px] font-bold text-stone-500 uppercase">${a.target}</span></td>
                 </tr>
             `).join('');
 
             // Sources
             const sourceContainer = document.getElementById('detail-sources-list');
             sourceContainer.innerHTML = v.sources.map(s => `
-                <a href="${s.url}" class="group p-4 bg-stone-50 rounded-lg flex items-center justify-between hover:bg-stone-100 transition-all">
-                    <span class="text-sm font-semibold text-stone-700 group-hover:text-stone-900">${s.text}</span>
+                <a href="${s.url}" class="group p-4 bg-stone-50 rounded-lg flex items-center justify-between hover:bg-purple-100 transition-all">
+                    <span class="text-sm font-semibold text-purple-800 group-hover:text-stone-900">${s.text}</span>
                     <span class="text-stone-300 group-hover:text-stone-500">→</span>
                 </a>
             `).join('');
