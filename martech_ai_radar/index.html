@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarTech Intelligence Radar</title>
+    <title>Marketing AI Radar Radar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { background-color: #fdfcf8; font-family: 'Inter', sans-serif; color: #1e293b; }
-        .accent-gold { color: #b79438; }
-        .bg-gold { background-color: #b79438; }
-    </style>
+        .accent-gold { color: #6b21a8; }
+        .bg-gold { background-color: #6b21a8; }
+    
+.sidebar-item-active {
+    background-color: #f3e8ff !important;
+    color: #581c87 !important;
+    border-right: 4px solid #6b21a8 !important;
+    font-weight: 700 !important;
+}
+
+</style>
 </head>
 <body class="flex min-h-screen">
 
     <aside class="w-64 bg-white border-r border-slate-200 p-6 flex flex-col justify-between">
         <div>
             <div class="mb-8">
-                <h1 class="text-xl font-bold tracking-tight text-slate-900 italic">MarTech Intelligence</h1>
+                <h1 class="text-xl font-bold tracking-tight text-slate-900 italic">Marketing AI Radar</h1>
                 <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Radar Update V2026.15</p>
             </div>
             <nav class="space-y-6">
@@ -40,11 +48,11 @@
     <main class="flex-1 p-10 max-w-6xl mx-auto">
         <div class="grid grid-cols-3 gap-6 mb-10">
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Assets Tracked</p>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Technologies Tracked</p>
                 <p id="kpi-total-assets" class="text-3xl font-black text-slate-900 mt-2">0</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Active Verticals</p>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Active Categories</p>
                 <p id="kpi-active-verticals" class="text-3xl font-black text-slate-900 mt-2">8</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
@@ -61,7 +69,7 @@
                 This overview summarizes the distribution of newly discovered AI assets across our core tracking categories. The radar focus for this week reflects a heavy surge in <strong>Autonomous Workflow Agents</strong> and <strong>Personalization Engines</strong>, indicating a market shift from "generative toy" to "operational utility."
             </p>
             <div class="pt-6 border-t border-slate-100">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 text-center">Asset Density By Category</p>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 text-center">Category Volume</p>
                 <div class="max-w-xl mx-auto h-64">
                     <canvas id="overviewChart"></canvas>
                 </div>
@@ -76,7 +84,7 @@
                     <p id="cat-summary" class="text-slate-600 leading-relaxed mt-4">Category shift summary description text.</p>
                 </div>
                 <div class="w-72 bg-slate-50 p-6 rounded-xl border border-slate-100 flex flex-col items-center justify-center">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Primary Audience Target</p>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">PRIMARY USER TARGET</p>
                     <div class="w-40 h-40">
                         <canvas id="categoryChart"></canvas>
                     </div>
@@ -85,8 +93,8 @@
 
             <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
                 <div class="p-6 border-b border-slate-100">
-                    <h3 class="font-bold text-lg text-slate-900">Featured Platforms & Products</h3>
-                    <p class="text-xs text-slate-500 mt-1">Interactive product breakdown for this vertical.</p>
+                    <h3 class="font-bold text-lg text-slate-900">Featured Technologies</h3>
+                    <p class="text-xs text-slate-500 mt-1">Technologies covered in this category</p>
                 </div>
                 <table class="w-full text-left border-collapse">
                     <thead>
@@ -228,7 +236,7 @@
                     labels: labels,
                     datasets: [{
                         data: dataValues,
-                        backgroundColor: '#b79438',
+                        backgroundColor: '#6b21a8',
                         borderRadius: 4
                     }]
                 },
@@ -268,7 +276,7 @@
                     labels: data.chartLabels,
                     datasets: [{
                         data: data.chartData,
-                        backgroundColor: ['#b79438', '#cbd5e1', '#78716c']
+                        backgroundColor: ['#6b21a8', '#cbd5e1', '#78716c']
                     }]
                 },
                 options: {
