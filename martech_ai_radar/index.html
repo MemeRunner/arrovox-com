@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Chosen Palette: Warm Professionalism (Neutral Almond, Slate Accents, and Soft Gold) -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
@@ -65,14 +65,14 @@
                 <div class="px-6 py-4">
                     <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2">Strategic Verticals</p>
                     <div id="vertical-nav-list" class="space-y-1">
-                        <!-- Navigation items injected via JS -->
+                        <!-- Navigation items injected dynamically -->
                     </div>
                 </div>
             </div>
 
             <div class="p-6 bg-stone-50 border-t border-stone-100">
                 <p class="text-xs text-stone-400 italic">Data Window:</p>
-                <p class="text-xs font-semibold text-stone-600">June 8 – June 15, 2026</p>
+                <p class="text-xs font-semibold text-stone-600">June 15 – June 20, 2026</p>
             </div>
         </nav>
 
@@ -82,11 +82,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 <div class="bg-white p-6 rounded-xl border border-stone-100 shadow-sm">
                     <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Total Assets Tracked</p>
-                    <p class="text-3xl font-bold text-stone-800">24</p>
+                    <p id="stat-total-assets" class="text-3xl font-bold text-stone-800">0</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-stone-100 shadow-sm">
                     <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Active Verticals</p>
-                    <p class="text-3xl font-bold text-stone-800">6</p>
+                    <p id="stat-active-verticals" class="text-3xl font-bold text-stone-800">0</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-stone-100 shadow-sm">
                     <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Update Status</p>
@@ -128,7 +128,7 @@
                 </section>
             </div>
 
-            <!-- Dynamic Section: Vertical Detail (Template) -->
+            <!-- Dynamic Section: Vertical Detail -->
             <div id="view-detail" class="hidden space-y-8">
                 <div id="detail-header" class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
@@ -192,8 +192,24 @@
             },
             verticals: [
                 {
+                    id: 'integration',
+                    title: 'Integration & ROI',
+                    fullTitle: 'Legacy Integration & ROI Optimization',
+                    summary: 'Enterprise systems are upgrading legacy on-premise configurations to support low-latency vector databases and agentic intelligence layers. Focus areas center heavily on migration cost recovery, operational efficiency audits, and ROI benchmarks.',
+                    assets: [
+                        { name: 'Octane AI Stack', capability: 'Legacy CRM connector with real-time vector indexing and caching.', target: 'Enterprise IT' },
+                        { name: 'Segment Unify Edge', capability: 'Low-latency streaming migration middleware for vector pipelines.', target: 'Data Engineers' },
+                        { name: 'Anaplan AI Planner', capability: 'Strategic capital allocation and portfolio ROI analytics.', target: 'Finance Ops' },
+                        { name: 'Cognizant Neuro', capability: 'Mainframe extraction agent translating COBOL schemas for modern LLMs.', target: 'Enterprise IT' }
+                    ],
+                    sources: [
+                        { text: 'Unlocking ROI in Legacy System Upgrades', url: '#' },
+                        { text: 'Architecting Vector Pipeline Adapters for Enterprise ERPs', url: '#' }
+                    ]
+                },
+                {
                     id: 'personalization',
-                    title: 'Generative CDPs',
+                    title: 'Personalization & CDPs',
                     fullTitle: 'Real-Time Personalization & Generative CDPs',
                     summary: 'The customer data layer is transitioning from static storage into natural language-driven activation engines. Marketers can now describe micro-persona cohorts in plain English and instantly trigger multi-channel personalized campaigns.',
                     assets: [
@@ -214,8 +230,8 @@
                 },
                 {
                     id: 'creative',
-                    title: 'Media Synthesis',
-                    fullTitle: 'Dynamic Ad Creative Platforms & Media Synthesis',
+                    title: 'Ad Creative',
+                    fullTitle: 'Dynamic Ad Creative Automation',
                     summary: 'Creative workflows are collapsing from slow storyboarding into automated generative pipelines. Brands can now instantly generate realistic avatar-driven video ads and localized voice-cloning while preserving emotional tone.',
                     assets: [
                         { name: 'HeyGen UGC', capability: 'Realistic AI avatar-driven user-generated content video ads.', target: 'Social Advertisers' },
@@ -233,8 +249,8 @@
                 },
                 {
                     id: 'autonomous',
-                    title: 'Workflow Agents',
-                    fullTitle: 'Autonomous Workflow Agents & Media Buying',
+                    title: 'Agentic Workflows',
+                    fullTitle: 'Autonomous Workflow & Media Agents',
                     summary: 'Media planning is transitioning to autonomous, self-learning agent networks. Specialized AI agents automate campaign setups, tracking, and programmatic bidding by processing petabytes of real-time data.',
                     assets: [
                         { name: 'Mediaocean NIVO AI', capability: 'Integrates agentic AI to automate campaign setups by 90%.', target: 'Media Buyers' },
@@ -250,8 +266,8 @@
                 },
                 {
                     id: 'search',
-                    title: 'Conversational Search',
-                    fullTitle: 'Conversational Search Visibility (AEO)',
+                    title: 'AI Search & AEO',
+                    fullTitle: 'Conversational Search Visibility & AEO',
                     summary: 'Traditional SEO is being augmented by Answer Engine Optimization (AEO). CMOs are deploying tracking to measure "Share of Model" (SoM)—how often brands are cited inside LLM outputs.',
                     assets: [
                         { name: 'Profound', capability: 'Measures Share of Model (SoM) across conversational LLMs.', target: 'Enterprise Brands' },
@@ -266,8 +282,8 @@
                 },
                 {
                     id: 'fine-tuning',
-                    title: 'Brand Voice Engines',
-                    fullTitle: 'Custom LLM Fine-Tuning & Brand Voice Engines',
+                    title: 'LLM Fine-Tuning',
+                    fullTitle: 'Custom LLM Fine-Tuning & Serving',
                     summary: 'Enterprise brands are moving away from generic models toward smaller, open-source models fine-tuned on proprietary brand guidelines and historic campaign assets.',
                     assets: [
                         { name: 'OpenAI Fine-Tuning', capability: 'Custom fine-tuning of GPT-4o models on brand voice.', target: 'Copywriters' },
@@ -295,6 +311,22 @@
                         { text: 'Adobe Launches Content Authenticity', url: '#' },
                         { text: 'EU AI Act Article 50 Compliance Standards', url: '#' }
                     ]
+                },
+                {
+                    id: 'synthesis',
+                    title: 'Asset Synthesis',
+                    fullTitle: 'Dynamic Multi-Format Asset Synthesis',
+                    summary: 'Marketing operations are adopting orchestration layers that coordinate layout engines, vector asset creation, and copy generation in lockstep, automating multi-variant creative distribution loops.',
+                    assets: [
+                        { name: 'Typeface AI', capability: 'Multi-modal brand content generator with unified design templates.', target: 'Creative Teams' },
+                        { name: 'Jasper Campaigns', capability: 'Cross-channel narrative synchronization engine for multi-asset rollouts.', target: 'Growth Marketers' },
+                        { name: 'Synthesia Loops', capability: 'Programmatic video distribution integrated with real-time analytics feeds.', target: 'Content Creators' },
+                        { name: 'Celonis Orchestrator', capability: 'Process-mining agent trigger-mapping creative asset assembly.', target: 'Marketing Ops' }
+                    ],
+                    sources: [
+                        { text: 'The Shift to Coordinated Multi-Format Asset Synthesis', url: '#' },
+                        { text: 'How Typeface Empowers Modular Omnichannel Campaigns', url: '#' }
+                    ]
                 }
             ]
         };
@@ -303,9 +335,18 @@
         let detailChart = null;
 
         function init() {
+            calculateAndRenderStats();
             renderNav();
             renderOverviewChart();
             switchView('overview');
+        }
+
+        function calculateAndRenderStats() {
+            const totalAssets = reportData.verticals.reduce((sum, v) => sum + v.assets.length, 0);
+            const activeVerticals = reportData.verticals.length;
+            
+            document.getElementById('stat-total-assets').innerText = totalAssets;
+            document.getElementById('stat-active-verticals').innerText = activeVerticals;
         }
 
         function renderNav() {
@@ -384,8 +425,8 @@
                     datasets: [{
                         label: 'Total Tools',
                         data: counts,
-                        backgroundColor: '#d6d3d1',
-                        borderColor: '#78716c',
+                        backgroundColor: '#b79438',
+                        borderColor: '#987a2b',
                         borderWidth: 1,
                         borderRadius: 4
                     }]
