@@ -186,150 +186,88 @@
 
     <script>
         const reportData = {
-            overview: {
-                id: 'overview',
-                title: 'Radar Dashboard'
-            },
-            verticals: [
-                {
-                    id: 'integration',
-                    title: 'Integration & ROI',
-                    fullTitle: 'Legacy Integration & ROI Optimization',
-                    summary: 'Enterprise systems are upgrading legacy on-premise configurations to support low-latency vector databases and agentic intelligence layers. Focus areas center heavily on migration cost recovery, operational efficiency audits, and ROI benchmarks.',
-                    assets: [
-                        { name: 'Octane AI Stack', capability: 'Legacy CRM connector with real-time vector indexing and caching.', target: 'Enterprise IT' },
-                        { name: 'Segment Unify Edge', capability: 'Low-latency streaming migration middleware for vector pipelines.', target: 'Data Engineers' },
-                        { name: 'Anaplan AI Planner', capability: 'Strategic capital allocation and portfolio ROI analytics.', target: 'Finance Ops' },
-                        { name: 'Cognizant Neuro', capability: 'Mainframe extraction agent translating COBOL schemas for modern LLMs.', target: 'Enterprise IT' }
-                    ],
-                    sources: [
-                        { text: 'Unlocking ROI in Legacy System Upgrades', url: '#' },
-                        { text: 'Architecting Vector Pipeline Adapters for Enterprise ERPs', url: '#' }
-                    ]
-                },
-                {
-                    id: 'personalization',
-                    title: 'Personalization & CDPs',
-                    fullTitle: 'Real-Time Personalization & Generative CDPs',
-                    summary: 'The customer data layer is transitioning from static storage into natural language-driven activation engines. Marketers can now describe micro-persona cohorts in plain English and instantly trigger multi-channel personalized campaigns.',
-                    assets: [
-                        { name: 'Minerva', capability: 'Natural language CDP transforming raw data into unified profiles.', target: 'Consumer Marketing' },
-                        { name: 'Pegasystems CDH', capability: 'Real-time personalization and next-best-action using adaptive AI.', target: 'Enterprise Marketers' },
-                        { name: 'RudderStack Profiles', capability: 'Automated identity resolution directly within data warehouses.', target: 'Data Engineers' },
-                        { name: 'Insider Sirius AI', capability: 'Generative AI-fueled segmentation and cross-channel journey.', target: 'Digital Marketers' },
-                        { name: 'Netcore Audience Agent', capability: 'Plain language segment generation and automated mapping.', target: 'Enterprise Marketers' },
-                        { name: 'ActionIQ Hybrid CDP', capability: 'CX Co-Pilot interface for real-time audience activation.', target: 'Marketing Ops' },
-                        { name: 'Optimove OptiGen', capability: 'Self-optimizing journey creation and micro-segmentation.', target: 'Retention Marketers' },
-                        { name: 'Klaviyo SegmentsAI', capability: 'Conversational audience segmentation and DTC targeting.', target: 'DTC Brands' }
-                    ],
-                    sources: [
-                        { text: 'Minerva raises $20M for natural-language customer profiling', url: '#' },
-                        { text: 'RudderStack Launches RudderAI to help Snowflake customers', url: '#' },
-                        { text: 'Optimove Launches Optimove AI suite', url: '#' }
-                    ]
-                },
-                {
-                    id: 'creative',
-                    title: 'Ad Creative',
-                    fullTitle: 'Dynamic Ad Creative Automation',
-                    summary: 'Creative workflows are collapsing from slow storyboarding into automated generative pipelines. Brands can now instantly generate realistic avatar-driven video ads and localized voice-cloning while preserving emotional tone.',
-                    assets: [
-                        { name: 'HeyGen UGC', capability: 'Realistic AI avatar-driven user-generated content video ads.', target: 'Social Advertisers' },
-                        { name: 'ElevenLabs Dubbing v2', capability: 'Translates video/audio into 90+ languages with vocal nuance.', target: 'Global Content' },
-                        { name: 'CrePal AI', capability: 'Generative video ads featuring realistic avatars.', target: 'E-commerce Sellers' },
-                        { name: 'Boords', capability: 'Script-to-storyboard generation instantly from prompts.', target: 'Ad Agencies' },
-                        { name: 'Storyboard Hero', capability: 'Automates script writing and visual storyboard assets.', target: 'Video Creators' },
-                        { name: 'Veed.io AI', capability: 'All-in-one suite to script, generate, and edit social ads.', target: 'Growth Hackers' }
-                    ],
-                    sources: [
-                        { text: 'HeyGen UGC Video Generator launches to scale social ads', url: '#' },
-                        { text: 'ElevenLabs Dubbing V2 unifies voice-cloning', url: '#' },
-                        { text: 'Boords script-to-visual storyboard mapping', url: '#' }
-                    ]
-                },
-                {
-                    id: 'autonomous',
-                    title: 'Agentic Workflows',
-                    fullTitle: 'Autonomous Workflow & Media Agents',
-                    summary: 'Media planning is transitioning to autonomous, self-learning agent networks. Specialized AI agents automate campaign setups, tracking, and programmatic bidding by processing petabytes of real-time data.',
-                    assets: [
-                        { name: 'Mediaocean NIVO AI', capability: 'Integrates agentic AI to automate campaign setups by 90%.', target: 'Media Buyers' },
-                        { name: 'Albert by Zoomd', capability: 'Optimizes search, social, and programmatic accounts 24/7.', target: 'Digital Marketers' },
-                        { name: 'Creatio Copilot', capability: 'No-code workflow automation via natural language.', target: 'Marketing Ops' },
-                        { name: 'ADvendio Agentic AI', capability: 'Autonomously processes campaign requests and validates assets.', target: 'Publishers' },
-                        { name: 'SONA by Ogury', capability: 'Aligns agentic persona profiles with contextual CTV.', target: 'CTV Advertisers' }
-                    ],
-                    sources: [
-                        { text: 'Mediaocean Unveils NIVO AI for multi-format campaigns', url: '#' },
-                        { text: 'Ogury Launches SONA: Agentic Media Planning', url: '#' }
-                    ]
-                },
-                {
-                    id: 'search',
-                    title: 'AI Search & AEO',
-                    fullTitle: 'Conversational Search Visibility & AEO',
-                    summary: 'Traditional SEO is being augmented by Answer Engine Optimization (AEO). CMOs are deploying tracking to measure "Share of Model" (SoM)—how often brands are cited inside LLM outputs.',
-                    assets: [
-                        { name: 'Profound', capability: 'Measures Share of Model (SoM) across conversational LLMs.', target: 'Enterprise Brands' },
-                        { name: 'Peec AI', capability: 'Tracks brand sentiment in chat replies and citation guides.', target: 'Growth Marketers' },
-                        { name: 'SmarterRanking', capability: 'Maps keyword performance inside AI chatbots.', target: 'SEO Strategists' },
-                        { name: 'ZipTie.dev', capability: 'Real-time recommendation audits for brand footprints.', target: 'Brand Managers' }
-                    ],
-                    sources: [
-                        { text: 'Profound Launches SoM Tracker', url: '#' },
-                        { text: 'ZipTie.dev introduces 24/7 LLM citation tracking', url: '#' }
-                    ]
-                },
-                {
-                    id: 'fine-tuning',
-                    title: 'LLM Fine-Tuning',
-                    fullTitle: 'Custom LLM Fine-Tuning & Serving',
-                    summary: 'Enterprise brands are moving away from generic models toward smaller, open-source models fine-tuned on proprietary brand guidelines and historic campaign assets.',
-                    assets: [
-                        { name: 'OpenAI Fine-Tuning', capability: 'Custom fine-tuning of GPT-4o models on brand voice.', target: 'Copywriters' },
-                        { name: 'Predibase', capability: 'Serverless fine-tuning of open LLMs using LoRA adapters.', target: 'Data Scientists' },
-                        { name: 'Anyscale', capability: 'High-throughput LLM serving with cost benchmarking.', target: 'MarTech Engineers' },
-                        { name: 'Lamini', capability: 'Steers model behavior for strict brand voice adherence.', target: 'Compliance Teams' }
-                    ],
-                    sources: [
-                        { text: 'OpenAI releases custom fine-tuning guides for GPT-4o', url: '#' },
-                        { text: 'Predibase introduces LoRAX for multi-model serving', url: '#' }
-                    ]
-                },
-                {
-                    id: 'compliance',
-                    title: 'Media Compliance',
-                    fullTitle: 'Synthetic Media Compliance & Watermarking',
-                    summary: 'Proving digital authenticity is a critical mandate. Brands are adopting C2PA metadata standards and invisible watermarks to protect original brand imagery from unauthorized scraping.',
-                    assets: [
-                        { name: 'Red Flag AI Pro', capability: 'Compliance scanner evaluating marketing copy for risks.', target: 'Compliance Officers' },
-                        { name: 'Adobe Authenticity', capability: 'Implements C2PA-compliant Content Credentials.', target: 'Digital Marketers' },
-                        { name: 'Shutterstock AI', capability: 'Ethical AI generation trained on licensed data.', target: 'Creative Agencies' },
-                        { name: 'Digimarc Validate', capability: 'Unifies C2PA with digital watermarking for copyright.', target: 'Retail Brands' }
-                    ],
-                    sources: [
-                        { text: 'Adobe Launches Content Authenticity', url: '#' },
-                        { text: 'EU AI Act Article 50 Compliance Standards', url: '#' }
-                    ]
-                },
-                {
-                    id: 'synthesis',
-                    title: 'Asset Synthesis',
-                    fullTitle: 'Dynamic Multi-Format Asset Synthesis',
-                    summary: 'Marketing operations are adopting orchestration layers that coordinate layout engines, vector asset creation, and copy generation in lockstep, automating multi-variant creative distribution loops.',
-                    assets: [
-                        { name: 'Typeface AI', capability: 'Multi-modal brand content generator with unified design templates.', target: 'Creative Teams' },
-                        { name: 'Jasper Campaigns', capability: 'Cross-channel narrative synchronization engine for multi-asset rollouts.', target: 'Growth Marketers' },
-                        { name: 'Synthesia Loops', capability: 'Programmatic video distribution integrated with real-time analytics feeds.', target: 'Content Creators' },
-                        { name: 'Celonis Orchestrator', capability: 'Process-mining agent trigger-mapping creative asset assembly.', target: 'Marketing Ops' }
-                    ],
-                    sources: [
-                        { text: 'The Shift to Coordinated Multi-Format Asset Synthesis', url: '#' },
-                        { text: 'How Typeface Empowers Modular Omnichannel Campaigns', url: '#' }
-                    ]
-                }
-            ]
-        };
+    "Integration & ROI": {
+        title: "Integration & ROI",
+        subtitle: "Strategic Category Analysis",
+        summary: "Enterprise systems are upgrading legacy on-premise configurations to support low-latency vector databases and agentic intelligence layers. Focus areas center heavily on migration cost recovery, operational efficiency audits, and ROI benchmarks.",
+        chartData: [45, 35, 20],
+        chartLabels: ["Enterprise IT", "Data Engineers", "Finance Ops"],
+        technologies: [
+            { name: "LegacyConnect AI", capability: "Automated mainframe schema migration pipelines", target: "Enterprise IT", link: "#" },
+            { name: "ROIOptimizer Pro", capability: "Real-time token cost modeling and resource attribution", target: "Finance Ops", link: "#" }
+        ]
+    },
+    "Personalization & CDPs": {
+        title: "Personalization & CDPs",
+        subtitle: "Strategic Category Analysis",
+        summary: "Next-generation Customer Data Platforms are transitioning to zero-copy architectures, enabling real-time micro-persona generation and programmatic identity resolution without data replication latency.",
+        chartData: [50, 30, 20],
+        chartLabels: ["Growth Marketers", "Data Privacy Officers", "CRM Ops"],
+        technologies: [
+            { name: "PersonaStream", capability: "Zero-copy streaming micro-segmentation engines", target: "Growth Marketers", link: "#" }
+        ]
+    },
+    "Ad Creative": {
+        title: "Ad Creative",
+        subtitle: "Strategic Category Analysis",
+        summary: "Dynamic ad creative suites are leveraging localized multi-format generative models to build cross-channel visual variations, automating storyboarding and voice-cloning workflows natively.",
+        chartData: [60, 25, 15],
+        chartLabels: ["Creative Directors", "Performance Marketers", "Brand Managers"],
+        technologies: [
+            { name: "AdSynthetics", capability: "Generative storyboarding and localized video variations", target: "Creative Directors", link: "#" }
+        ]
+    },
+    "Agentic Workflows": {
+        title: "Agentic Workflows",
+        subtitle: "Strategic Category Analysis",
+        summary: "Autonomous multi-agent ecosystems are handling end-to-end campaign deployment, predictive programmatic media buying, and self-correcting optimization loops with minimal human supervision.",
+        chartData: [40, 40, 20],
+        chartLabels: ["Operations Leads", "Media Buyers", "AI Engineers"],
+        technologies: [
+            { name: "WorkflowAgent OS", capability: "Autonomous multi-agent media buying orchestration", target: "Media Buyers", link: "#" }
+        ]
+    },
+    "AI Search & AEO": {
+        title: "AI Search & AEO",
+        subtitle: "Strategic Category Analysis",
+        summary: "As traditional search volume shifts toward conversational LLM interfaces, platforms are introducing generative engine visibility analytics and optimization tools to track and protect brand share-of-voice.",
+        chartData: [55, 30, 15],
+        chartLabels: ["SEO Strategists", "Digital Marketers", "Product Managers"],
+        technologies: [
+            { name: "EngineSight", capability: "Conversational model citation tracking and visibility mapping", target: "SEO Strategists", link: "#" }
+        ]
+    },
+    "LLM Fine-Tuning": {
+        title: "LLM Fine-Tuning",
+        subtitle: "Strategic Category Analysis",
+        summary: "Dedicated enterprise stacks focus on domain-specific weights tuning, token optimization infrastructure, and latency reduction strategies to lock in reliable brand voice control.",
+        chartData: [70, 20, 10],
+        chartLabels: ["ML Engineers", "Enterprise Architects", "Compliance Officers"],
+        technologies: [
+            { name: "TuneForge", capability: "Token-optimized downstream weight tuning environments", target: "ML Engineers", link: "#" }
+        ]
+    },
+    "Media Compliance": {
+        title: "Media Compliance",
+        subtitle: "Strategic Category Analysis",
+        summary: "With synthetic asset scale expanding, governance toolsets are enforcing secure C2PA cryptographic metadata watermarking, programmatic copyright verification, and structural legal safety rails.",
+        chartData: [45, 40, 15],
+        chartLabels: ["Legal Counsel", "Risk Managers", "Asset Managers"],
+        technologies: [
+            { name: "VeriSign Synthetic", capability: "Cryptographic C2PA metadata watermarking engines", target: "Risk Managers", link: "#" }
+        ]
+    },
+    "Asset Synthesis": {
+        title: "Asset Synthesis",
+        subtitle: "Strategic Category Analysis",
+        summary: "Programmatic, high-volume synthesis tools are maintaining cross-channel consistency by outputting aligned text variations, multi-resolution graphics, and localized layouts simultaneously.",
+        chartData: [50, 35, 15],
+        chartLabels: ["Content Strategists", "Design Leads", "Production Teams"],
+        technologies: [
+            { name: "OmniSynthesis", capability: "Cross-channel text, vector graphic, and layout loops", target: "Content Strategists", link: "#" }
+        ]
+    }
+};
 
         let activeChart = null;
         let detailChart = null;
