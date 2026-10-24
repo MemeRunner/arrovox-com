@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arrovox | Doug Schumacher</title>
+    <title>ARROVOX | Doug Schumacher</title>
     <link rel="icon" href="favicon.ico" sizes="48x48">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
@@ -26,6 +26,13 @@
         header {
             margin-bottom: 60px;
         }
+        .brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            max-width: 100%;
+        }
         header .logo {
             display: block;
             height: 200px;
@@ -36,9 +43,12 @@
             font-family: 'Work Sans', sans-serif;
             font-size: clamp(2.5em, 10vw, 5.5em); /* Responsive scaling for mobile */
             font-weight: 100;
+            text-transform: uppercase;
             margin: 0 0 20px 0;
             letter-spacing: 11px;
+            padding-left: 11px; /* balances the trailing letter-spacing so the mark centers on the word */
             color: #ffffff;
+            white-space: nowrap;
         }
         .tagline {
             font-size: 1.25em;
@@ -82,8 +92,10 @@
 
     <div class="container">
         <header>
-            <img class="logo" src="images/arrovox-mark.png" alt="arrovox" height="200">
-            <h1>arrovox</h1>
+            <div class="brand">
+                <img class="logo" src="images/arrovox-mark.png" alt="ARROVOX" height="200">
+                <h1>arrovox</h1>
+            </div>
             <p class="tagline">
                 Arrovox is an ongoing technical exploration of applied artificial intelligence and progressive product design
             </p>
