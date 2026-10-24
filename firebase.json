@@ -1,19 +1,14 @@
 {
   "hosting": {
-    "public": "martech_ai_radar",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
       "**/ai-advisor/**",
       "**/*.py",
-      "**/*.md"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      "**/*.md",
+      "martech_ai_radar/**"
     ]
   }
 }
